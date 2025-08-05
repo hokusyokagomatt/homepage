@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>施工実績 - カゴマット工事</title>
+
+  <!-- ✅ フォント追加 -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #ffffff; }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .logo {
+      font-family: 'Anton', sans-serif; /* ✅ フォントをAntonに設定 */
+      font-size: 24px;
+      color: #2c3e50;
+      text-decoration: none;
+    }
+    nav a {
+      margin-left: 20px;
+      color: #2c3e50;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      padding: 120px 20px 180px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 120px;
+      margin-top: 60px;
+      padding-top: 20px;
+      color: #2c3e50;
+      letter-spacing: 0.05em;
+      line-height: 2.2;
+    }
+
+    .title-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .divider-line {
+      height: 4px;
+      width: 200px;
+      background: linear-gradient(to right, rgba(0,0,0,0), #4caf50, rgba(0,0,0,0));
+      border-radius: 2px;
+      flex: 1;
+      max-width: 300px;
+    }
+
+    .title-text {
+      white-space: pre-line;
+    }
+
+    .gallery-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 60px 0 20px;
+      color: #333;
+    }
+
+    .gallery {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.02);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #f8f8f8;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <nav>
+      <a href="../index.html" class="logo">HOKUSYO</a>
+      <div>
+        <a href="../index.html">ホーム</a>
+        <a href="../about.html">会社概要</a>
+        <a href="../service.html">事業内容</a>
+        <a href="../contact.html">お問い合わせ</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- セクション -->
+  <section class="section">
+    <h1>
+      施工実績<br><br><br>
+      <div class="title-wrapper">
+        <div class="divider-line"></div>
+        <div class="title-text">カゴマット工事</div>
+        <div class="divider-line"></div>
+      </div>
+    </h1>
+
+    <div class="gallery-title">茨城県茨城町｜カゴマット工多段積み（ハイパーマット）</div>
+
+    <div class="gallery">
+      <img src="kagomatt1.jpg" alt="カゴマット施工1" onclick="openModal(this)">
+      <img src="kagomatt2.jpg" alt="カゴマット施工2" onclick="openModal(this)">
+      <img src="kagomatt3.jpg" alt="カゴマット施工3" onclick="openModal(this)">
+      <img src="kagomatt4.jpg" alt="カゴマット施工4" onclick="openModal(this)">
+      <img src="kagomatt5.jpg" alt="カゴマット施工5" onclick="openModal(this)">
+      <img src="kagomatt6.jpg" alt="カゴマット施工6" onclick="openModal(this)">
+    </div>
+  </section>
+
+  <!-- モーダル -->
+  <div class="modal" id="modal" onclick="closeModal()">
+    <img id="modalImage" src="" alt="">
+  </div>
+
+  <!-- フッター -->
+  <footer>
+    &copy; 北翔カゴマット株式会社 | 埼玉県行田市前谷453-2 | TEL: 048-553-5886
+  </footer>
+
+  <script>
+    function openModal(img) {
+      const modal = document.getElementById('modal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = img.src;
+      modal.classList.add('show');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.remove('show');
+    }
+  </script>
+
+</body>
+</html>
+

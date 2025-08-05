@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>北翔カゴマット株式会社</title>
 
-  <!-- Google Fonts（Anton） -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
 
   <style>
@@ -15,7 +15,6 @@
       background: #ffffff;
     }
 
-    /* ナビバー固定 */
     header {
       position: fixed;
       width: 100%;
@@ -52,13 +51,12 @@
       text-decoration: underline;
     }
 
-    /* スライドショー */
     .slideshow {
       position: relative;
       width: 100%;
       height: 100vh;
       overflow: hidden;
-      margin-top: 70px; /* ナビバーの高さ分 */
+      margin-top: 70px;
     }
 
     .slide {
@@ -110,12 +108,57 @@
       right: 20px;
     }
 
+    section {
+      padding: 120px 20px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 48px; /* 写真の行間（前より広め） */
+    }
+
+    @media (min-width: 768px) {
+      .grid.md\:grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
     footer {
       text-align: center;
       padding: 40px 20px;
       background: #f8f8f8;
       font-size: 14px;
       color: #777;
+    }
+
+    .work-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 16px; /* ← 写真に角を追加 */
+    }
+
+    .work-card h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 12px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .work-card p {
+      font-size: 14px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .section-title {
+      margin-top: 60px;
+      margin-bottom: 60px;
     }
   </style>
 </head>
@@ -145,12 +188,56 @@
     <div class="arrow right" onclick="next()">›</div>
   </div>
 
+  <!-- 自社紹介文 -->
+  <section class="text-center" style="font-size: 18px; line-height: 2.2; letter-spacing: 0.03em; font-weight: 500;">
+    <h2 class="text-2xl font-bold section-title">川とともに未来を築く。</h2>
+    <p class="max-w-3xl mx-auto text-gray-700 leading-relaxed">
+      北翔カゴマット株式会社は、河川工事の施工会社です。<br>
+<br> <!-- 下に空行 -->
+      カゴマット工・ブロック工などの護岸工事で、河川氾濫防止・災害復旧・環境保全に貢献しています。<br>
+      創業以来、東日本各地で80名規模の職人と共に数多くの実績を築いてきました。<br>
+      安全で持続可能な水辺の未来を支える、それが私たちの使命です。
+    </p>
+  </section>
+
+  <!-- 施工実績 -->
+  <section class="bg-white text-center">
+    <h2 class="text-3xl font-bold mb-2" style="color: #000; letter-spacing: 0.05em;">施工実績</h2>
+    <div class="w-6 h-1 bg-blue-300 mx-auto mb-12"></div>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <!-- カゴマット工事 -->
+      <a href="works/kagomatt.html" class="block hover:opacity-90 work-card">
+        <img src="images/kagomatt-real.jpg" alt="カゴマット工事">
+        <div class="mt-4 text-left">
+          <h3>カゴマット工事</h3>
+        </div>
+      </a>
+
+      <!-- 護岸ブロック工事 -->
+      <a href="works/block.html" class="block hover:opacity-90 work-card">
+        <img src="images/block-real.jpg" alt="護岸ブロック工事">
+        <div class="mt-4 text-left">
+          <h3>護岸ブロック工事</h3>
+        </div>
+      </a>
+
+      <!-- ゴルフ場造成工事 -->
+      <a href="works/golf.html" class="block hover:opacity-90 work-card">
+        <img src="images/golf-real.jpg" alt="ゴルフ場造成工事">
+        <div class="mt-4 text-left">
+          <h3>ゴルフ場造成工事</h3>
+        </div>
+      </a>
+    </div>
+  </section>
+
   <!-- フッター -->
   <footer>
     &copy; 北翔カゴマット株式会社 | 埼玉県行田市前谷453-2 | TEL: 048-553-5886
   </footer>
 
-  <!-- JavaScript -->
+  <!-- スライドショー スクリプト -->
   <script>
     let idx = 0;
     const slides = document.querySelectorAll(".slide");
@@ -172,5 +259,6 @@
 
     setInterval(next, 4000);
   </script>
+
 </body>
 </html>
