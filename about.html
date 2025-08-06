@@ -6,7 +6,11 @@
   <title>会社概要 | 北翔カゴマット株式会社</title>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
   <style>
-    body { margin: 0; font-family: sans-serif; background: #ffffff; }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #ffffff;
+    }
 
     header {
       position: fixed;
@@ -44,28 +48,28 @@
       text-decoration: underline;
     }
 
-    .section {
-      padding: 120px 20px 100px;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-
-    h1 {
+    .page-title {
+      margin-top: 250px;
+      margin-bottom: 160px;
       font-size: 32px;
-      margin-bottom: 40px;
-      margin-top: 60px;
-      padding-top: 20px;
-      color: #2c3e50;
+      font-weight: bold;
+      text-align: center;
       letter-spacing: 0.05em;
-      line-height: 2.2;
     }
 
     .about-photo {
       max-width: 100%;
       height: auto;
-      border-radius: 10px;
-      margin-bottom: 60px;
+      border-radius: 16px;
+      margin: 80px auto 0;
+      display: block;
+    }
+
+    .section {
+      padding: 0 20px 100px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
     }
 
     .info-line {
@@ -78,6 +82,23 @@
 
     .info-container {
       text-align: left;
+      margin-bottom: 80px;
+    }
+
+    .contact-section {
+      margin-top: 60px;
+      text-align: left;
+    }
+
+    .contact-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .contact-email {
+      font-size: 18px;
+      color: #0066cc;
     }
 
     footer {
@@ -98,18 +119,18 @@
       <a href="index.html" class="logo">HOKUSYO</a>
       <div>
         <a href="index.html">ホーム</a>
+        <a href="works.html">施工実績</a>
+        <a href="business.html">事業内容</a>
         <a href="about.html">会社概要</a>
-        <a href="service.html">事業内容</a>
-        <a href="contact.html">お問い合わせ</a>
       </div>
     </nav>
   </header>
 
-  <!-- セクション -->
-  <section class="section">
-    <h1>会社概要</h1>
+  <!-- タイトル -->
+  <h1 class="page-title">会社概要</h1>
 
-    <img src="about-photo.jpg" alt="会社写真" class="about-photo" />
+  <!-- メインセクション -->
+  <section class="section">
 
     <div class="info-container">
       <div class="info-line">会社名：北翔カゴマット株式会社</div>
@@ -117,7 +138,18 @@
       <div class="info-line">代表者名：北根 栄一</div>
       <div class="info-line">設立年：1996年</div>
       <div class="info-line">資本金：1000万円</div>
+
+      <!-- お問い合わせ -->
+      <div class="contact-section">
+        <div class="contact-title">お問い合わせ</div>
+        <div class="contact-email">
+          メール: <a href="mailto:hokusyo@drive.ocn.ne.jp">hokusyo@drive.ocn.ne.jp</a>
+        </div>
+      </div>
     </div>
+
+    <img src="images/landscape1.jpg" alt="会社写真" class="about-photo" />
+
   </section>
 
   <!-- フッター -->

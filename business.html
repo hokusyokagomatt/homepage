@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>事業内容 - 北翔カゴマット株式会社</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #ffffff;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .logo {
+      font-family: 'Anton', sans-serif;
+      font-size: 24px;
+      color: #2c3e50;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #2c3e50;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .page-title {
+      margin-top: 250px;
+      margin-bottom: 160px;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    .intro-photo {
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      display: block;
+      margin: 0 auto 80px;
+      border-radius: 16px;
+    }
+
+    .description {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      line-height: 2.2;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .description strong {
+      font-size: 20px;
+      font-weight: bold;
+      display: block;
+      margin-top: 30px;
+    }
+
+    .section-bg {
+      background-color: #0000;
+      padding: 80px 20px 100px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 48px;
+    }
+
+    @media (min-width: 768px) {
+      .grid.md\:grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .grid-container {
+      max-width: 1536px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .work-card {
+      text-align: center;
+    }
+
+    .work-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .work-card h3 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 12px;
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background: #f8f8f8;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">HOKUSYO</a>
+      <div>
+        <a href="index.html">ホーム</a>
+        <a href="works.html">施工実績</a>
+        <a href="business.html">事業内容</a>
+        <a href="about.html">会社概要</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- タイトル -->
+  <h1 class="page-title">事業内容</h1>
+
+  <!-- 写真と説明 -->
+  <section>
+    <img src="images/landscape2.jpg" alt="事業風景" class="intro-photo">
+
+    <div class="description">
+      <strong>〇 河川護岸工事</strong>
+      カゴマット工・多段積み工・じゃかご工・ふとんかご工などの詰石工や、張ブロック・連結ブロック・連節ブロック・積ブロック・縁石ブロックなどのブロック工の施工を行います。
+
+      <strong>〇 ゴルフ場造成工事</strong>
+      バンカー改修工事・池改修工事・管改修工事などのゴルフ場における土木工事の施工を行います。
+
+      <strong>〇 その他土木工事</strong>
+      各種インフラ整備や造成工事など幅広く対応しています。
+    </div>
+  </section>
+
+  <!-- 施工実績 -->
+  <section class="section-bg">
+    <h2 class="page-title">施工実績</h2>
+    <div class="grid md:grid-cols-3 gap-6 grid-container">
+      <a href="works/kagomatt.html" class="block hover:opacity-90 work-card">
+        <img src="images/kago_thumb.jpg" alt="カゴマット工事">
+        <h3>カゴマット工事</h3>
+      </a>
+      <a href="works/block.html" class="block hover:opacity-90 work-card">
+        <img src="images/block_thumb.jpg" alt="護岸ブロック工事">
+        <h3>護岸ブロック工事</h3>
+      </a>
+      <a href="works/golf.html" class="block hover:opacity-90 work-card">
+        <img src="images/golf_thumb.jpg" alt="ゴルフ場造成工事">
+        <h3>ゴルフ場造成工事</h3>
+      </a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    &copy; 北翔カゴマット株式会社 | 埼玉県行田市前谷453-2 | TEL: 048-553-5886
+  </footer>
+
+</body>
+</html>

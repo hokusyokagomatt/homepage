@@ -114,7 +114,7 @@
 
     .grid {
       display: grid;
-      gap: 48px; /* 写真の行間（前より広め） */
+      gap: 48px;
     }
 
     @media (min-width: 768px) {
@@ -133,13 +133,14 @@
       background: #f8f8f8;
       font-size: 14px;
       color: #777;
+      margin-top: 120px;
     }
 
     .work-card img {
       width: 100%;
       height: 240px;
       object-fit: cover;
-      border-radius: 16px; /* ← 写真に角を追加 */
+      border-radius: 16px;
     }
 
     .work-card h3 {
@@ -147,13 +148,11 @@
       font-weight: bold;
       margin-top: 12px;
       color: #000;
-      text-decoration: none;
     }
 
     .work-card p {
       font-size: 14px;
       color: #000;
-      text-decoration: none;
     }
 
     .section-title {
@@ -171,18 +170,18 @@
       <a href="index.html" class="logo">HOKUSYO</a>
       <div>
         <a href="index.html">ホーム</a>
+        <a href="works.html">施工実績</a>
+        <a href="business.html">事業内容</a>
         <a href="about.html">会社概要</a>
-        <a href="service.html">事業内容</a>
-        <a href="contact.html">お問い合わせ</a>
       </div>
     </nav>
   </header>
 
   <!-- スライドショー -->
   <div class="slideshow">
-    <img src="full_slide1.jpg" class="slide active" />
-    <img src="full_slide2.jpg" class="slide" />
-    <img src="full_slide3.jpg" class="slide" />
+    <img src="images/slide1.jpg" class="slide active" />
+    <img src="images/slide2.jpg" class="slide" />
+    <img src="images/slide3.jpg" class="slide" />
     <div class="slide-message">Preserving Rivers, Protecting Nature.</div>
     <div class="arrow left" onclick="prev()">‹</div>
     <div class="arrow right" onclick="next()">›</div>
@@ -192,8 +191,7 @@
   <section class="text-center" style="font-size: 18px; line-height: 2.2; letter-spacing: 0.03em; font-weight: 500;">
     <h2 class="text-2xl font-bold section-title">川とともに未来を築く。</h2>
     <p class="max-w-3xl mx-auto text-gray-700 leading-relaxed">
-      北翔カゴマット株式会社は、河川工事の施工会社です。<br>
-<br> <!-- 下に空行 -->
+      <strong style="font-size: 24px; font-weight: bold;">北翔カゴマット株式会社は、河川工事の施工会社です。</strong><br><br>
       カゴマット工・ブロック工などの護岸工事で、河川氾濫防止・災害復旧・環境保全に貢献しています。<br>
       創業以来、東日本各地で80名規模の職人と共に数多くの実績を築いてきました。<br>
       安全で持続可能な水辺の未来を支える、それが私たちの使命です。
@@ -201,30 +199,32 @@
   </section>
 
   <!-- 施工実績 -->
-  <section class="bg-white text-center">
-    <h2 class="text-3xl font-bold mb-2" style="color: #000; letter-spacing: 0.05em;">施工実績</h2>
-    <div class="w-6 h-1 bg-blue-300 mx-auto mb-12"></div>
-
+  <section class="text-center" style="background-color: #FFA500; padding-top: 60px;">
+    <h2 class="text-10xl font-bold mb-6" style="
+        color: #000;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        letter-spacing: 0.05em;
+      ">
+      施工実績
+    </h2>
+    <div class="w-6 h-1 bg-white mx-auto mb-12"></div>
     <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <!-- カゴマット工事 -->
-      <a href="works/kagomatt.html" class="block hover:opacity-90 work-card">
-        <img src="images/kagomatt-real.jpg" alt="カゴマット工事">
+      <a href="kagomatt_works.html" class="block hover:opacity-90 work-card">
+        <img src="images/kago_thumb.jpg" alt="カゴマット工事">
         <div class="mt-4 text-left">
           <h3>カゴマット工事</h3>
         </div>
       </a>
 
-      <!-- 護岸ブロック工事 -->
-      <a href="works/block.html" class="block hover:opacity-90 work-card">
-        <img src="images/block-real.jpg" alt="護岸ブロック工事">
+      <a href="block_works.html" class="block hover:opacity-90 work-card">
+        <img src="images/block_thumb.jpg" alt="護岸ブロック工事">
         <div class="mt-4 text-left">
           <h3>護岸ブロック工事</h3>
         </div>
       </a>
 
-      <!-- ゴルフ場造成工事 -->
-      <a href="works/golf.html" class="block hover:opacity-90 work-card">
-        <img src="images/golf-real.jpg" alt="ゴルフ場造成工事">
+      <a href="golf_works.html" class="block hover:opacity-90 work-card">
+        <img src="images/golf_thumb.jpg" alt="ゴルフ場造成工事">
         <div class="mt-4 text-left">
           <h3>ゴルフ場造成工事</h3>
         </div>

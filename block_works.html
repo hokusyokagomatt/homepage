@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>施工実績 - 護岸ブロック工事</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #ffffff; }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .logo {
+      font-family: 'Anton', sans-serif;
+      font-size: 24px;
+      color: #2c3e50;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #2c3e50;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .page-title {
+      margin-top: 250px;
+      margin-bottom: 160px;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    .section {
+      padding: 0 20px 180px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .title-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 120px;
+    }
+
+    .divider-line {
+      height: 4px;
+      width: 200px;
+      background: linear-gradient(to right, rgba(0,0,0,0), #1e90ff, rgba(0,0,0,0)); /* blue */
+      border-radius: 2px;
+      flex: 1;
+      max-width: 300px;
+    }
+
+    .title-text {
+      white-space: pre-line;
+      font-size: 32px;
+      font-weight: bold;
+      color: #2c3e50;
+      letter-spacing: 0.05em;
+    }
+
+    .gallery-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 60px 0 20px;
+      color: #333;
+    }
+
+    .gallery {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.02);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .modal img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  position: relative;
+  top: 40px; /* ← これを追加！ヘッダー分だけ下げる */
+}
+
+    .modal.show {
+      display: flex;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #f8f8f8;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">HOKUSYO</a>
+      <div>
+        <a href="index.html">ホーム</a>
+        <a href="works.html">施工実績</a>
+        <a href="business.html">事業内容</a>
+        <a href="about.html">会社概要</a>
+      </div>
+    </nav>
+  </header>
+
+ 
+  <!-- ページタイトル -->
+  <h1 class="page-title">施工実績</h1>
+
+  <!-- セクション -->
+  <section class="section">
+    <div class="title-wrapper">
+      <div class="divider-line"></div>
+      <div class="title-text">護岸ブロック工事</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- 1つ目の現場 -->
+    <div class="gallery-title">埼玉県さいたま市｜連結ブロック工</div>
+    <div class="gallery">
+      <img src="images/block_01.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_02.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_03.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_04.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_05.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_06.jpg" alt="" onclick="openModal(this)">
+    </div>
+
+    <!-- 2つ目の現場 -->
+    <div class="gallery-title" style="margin-top: 250px;">栃木県足利市｜連節ブロック工・小型連節ブロック工・階段ブロック工</div>
+    <div class="gallery">
+      <img src="images/block_07.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_08.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_09.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_10.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_11.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_12.jpg" alt="" onclick="openModal(this)">
+    </div>
+
+    <!-- 3つ目の現場 -->
+    <div class="gallery-title" style="margin-top: 250px;">茨城県常陸大宮市｜連節ブロック工・縁石ブロック工・階段ブロック工・カゴマット工</div>
+    <div class="gallery">
+      <img src="images/block_13.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_14.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_15.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_16.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_17.jpg" alt="" onclick="openModal(this)">
+      <img src="images/block_18.jpg" alt="" onclick="openModal(this)">
+    </div>
+  </section>
+
+  <!-- モーダル -->
+  <div class="modal" id="modal" onclick="closeModal()">
+    <img id="modalImage" src="" alt="">
+  </div>
+
+  <!-- フッター -->
+  <footer>
+    &copy; 北翔カゴマット株式会社 | 埼玉県行田市前谷453-2 | TEL: 048-553-5886
+  </footer>
+
+  <script>
+    function openModal(img) {
+      const modal = document.getElementById('modal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = img.src;
+      modal.classList.add('show');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.remove('show');
+    }
+  </script>
+</body>
+</html>
